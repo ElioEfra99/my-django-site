@@ -1,9 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block page_title %}
     My posts
 {% endblock page_title %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/posts.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/shared/post.css' %}">
+{% endblock css_files %}
+
 {% block content %}
-    <h2>Here you can see all my posts</h2>
+    <section id="all-posts">
+        <ul>
+            {% include 'blog/shared/post.html' %}
+            {% include 'blog/shared/post.html' %}
+            {% include 'blog/shared/post.html' %}
+            {% include 'blog/shared/post.html' %}
+            {% include 'blog/shared/post.html' %}
+            {% include 'blog/shared/post.html' %}
+        </ul>
+    </section>
 {% endblock content %}
