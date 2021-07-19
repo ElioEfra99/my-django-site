@@ -13,12 +13,9 @@
 {% block content %}
     <section id="all-posts">
         <ul>
-            {% include 'blog/shared/post.html' %}
-            {% include 'blog/shared/post.html' %}
-            {% include 'blog/shared/post.html' %}
-            {% include 'blog/shared/post.html' %}
-            {% include 'blog/shared/post.html' %}
-            {% include 'blog/shared/post.html' %}
+            {% for post in posts %}
+                {% include 'blog/shared/post.html' %}
+            {% endfor %}
         </ul>
     </section>
 {% endblock content %}
