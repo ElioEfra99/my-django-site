@@ -1,9 +1,41 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block page_title %}
     {{ post_name }}
 {% endblock page_title %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/full-post.css' %}">
+{% endblock css_files %}
+
 {% block content %}
-    <p>Post #1</p>
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post Title">
+            <address>By Eliu</address>
+            <div>
+                Last updated on <time>July 10th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Doloremque alias aliquid repudiandae dolor delectus. 
+            Esse voluptates incidunt ea corrupti vero illum, expedita inventore! Dolore non molestiae quam dolor placeat impedit?
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Doloremque alias aliquid repudiandae dolor delectus. 
+            Esse voluptates incidunt ea corrupti vero illum, expedita inventore! Dolore non molestiae quam dolor placeat impedit?
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Doloremque alias aliquid repudiandae dolor delectus. 
+            Esse voluptates incidunt ea corrupti vero illum, expedita inventore! Dolore non molestiae quam dolor placeat impedit?
+        </p>
+    </main>
 {% endblock content %}
