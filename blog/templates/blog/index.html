@@ -24,11 +24,9 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            <li>
-                <article class="post">
-                    {% include 'blog/shared/post.html' %}
-                </article>
-            </li>
+            {% for post in posts %}
+                {% include 'blog/shared/post.html' %}
+            {% endfor %}
         </ul>
     </section>
 
