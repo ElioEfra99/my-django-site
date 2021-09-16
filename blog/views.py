@@ -22,6 +22,8 @@ def load_post(request, slug):
     identified_post = get_object_or_404(Post, slug=slug)
     context = {
         'post': identified_post,
+        'post_tags': identified_post.tags.all(),
     }
 
     return render(request, 'blog/full-post.html', context)
+    
